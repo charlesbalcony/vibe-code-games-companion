@@ -43,10 +43,10 @@ the book's chapters are finalized.)
 | `ch06-2-ramp-organic-rain-hitbox` | Ch. 6, "difficulty ramp, organic rain, forgiving hitbox" | start gentle, get mean, lie kindly about your hitbox |
 | `ch07-1-score-with-the-heist-bug` | Ch. 7, mid-session — **deliberately broken** | score bubbles but not survival (find out why!) |
 | `ch07-2-heist-fixed` | Ch. 7, "the great zero-points heist" fixed | tick the survival score properly |
-| `ch07-3-juice-pass` | Ch. 7, end | *(coming)* |
-| `ch08-1-menus-and-memory` | Ch. 8, end | *(coming)* |
-| `ch09-1-v1.0-shipped` | Ch. 9, `v1.0: shipped to itch.io` | *(coming)* |
-| `ch10 → ch12` | Part III re-skin checkpoints | *(coming)* |
+| `ch07-3-juice-pass` | Ch. 7, end of session three | pop, punch, freeze, SHAKE, and wink at your near-misses |
+| `ch08-1-menus-and-memory` | Ch. 8, end of session four | boot to a menu, pause, remap keys, remember your best forever |
+| `ch09-1-v1-0-shipped` | Ch. 9, `v1.0: shipped to itch.io` | credit its maker (the export/itch steps are in its README) |
+| `ch10 → ch12` | Part III re-skin checkpoints | *(coming — they need the generated art and audio)* |
 
 Bonus: this repo's **git history** mirrors the book — each checkpoint
 was committed with the book's own commit message, so `git log` reads
