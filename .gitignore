@@ -1,0 +1,10 @@
+# Secrets
+.env
+
+# Godot generated files (every checkpoint is its own project)
+**/.godot/
+*.import
+
+# OS noise
+Thumbs.db
+.DS_Store
