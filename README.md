@@ -54,8 +54,13 @@ like the story, and chapter 14's bisect exercise has a practice arena.
 
 ## Also in here
 
+- `assets/` — the actual generated game assets from Part III: sprites
+  (AI, transparent PNG), music (local MusicGen, **non-commercial
+  license — read `assets/CREDITS.txt`**), and synthesized SFX. Can't
+  run the generators yet? Use these and keep reading.
 - `tools/` — `generate_sprite.py` (ch. 10: OpenAI API → transparent
-  PNG sprites) and `generate_music.py` (ch. 11: local MusicGen music).
+  PNG sprites), `generate_music.py` (ch. 11: local MusicGen music),
+  and `generate_sfx.py` (ch. 11: zero-dependency retro SFX, no AI).
 - `templates/` — the starter `CLAUDE.md` house rules, `.env.example`,
   and launcher scripts, ready to copy into a new project.
 - `prompts/prompt-cookbook.md` — Appendix B: every load-bearing prompt

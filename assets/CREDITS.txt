@@ -1,0 +1,22 @@
+Asset receipts for the Flush Rush companion assets — the chapter 11
+habit, practiced: what it is, what made it, what the license says.
+
+MUSIC (assets/music/)
+theme.ogg — gameplay loop. Generated locally with Meta MusicGen
+  (musicgen-stereo-large) via tools/generate_music.py on the author's
+  GPU. Weights license: CC-BY-NC 4.0 — NON-COMMERCIAL. Fine for the
+  free companion game and your learning projects; NOT for a game you
+  sell. Regenerate with a commercially-licensed model before any paid
+  release (chapter 15 explains when this bites).
+menu.ogg — menu loop. Same provenance and license as theme.ogg.
+
+SOUND EFFECTS (assets/sfx/)
+pop.wav, whoosh.wav, sting.wav, click.wav, zing.wav — synthesized
+  (no AI) with tools/generate_sfx.py. Public domain. Go nuts.
+
+SPRITES (assets/sprites/)
+duck.png, plunger.png, bubble.png, logo-flush-rush.png, clogged.png,
+icon-duck-face.png — generated with OpenAI's image API (gpt-image-1,
+  transparent background) via tools/generate_sprite.py, directed and
+  curated by the author. Per OpenAI's terms, the user owns generated
+  outputs. Disclose AI generation where a store asks (chapter 15).
