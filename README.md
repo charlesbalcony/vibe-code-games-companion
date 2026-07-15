@@ -65,3 +65,4 @@ like the story, and chapter 14's bisect exercise has a practice arena.
 
 Code and project files: MIT (see `LICENSE`). The book's text is not in
 this repo and is not covered by it.
+# vibe-code-games-companion
