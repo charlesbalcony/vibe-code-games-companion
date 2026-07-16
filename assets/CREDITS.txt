@@ -20,3 +20,16 @@ icon-duck-face.png — generated with OpenAI's image API (gpt-image-1,
   transparent background) via tools/generate_sprite.py, directed and
   curated by the author. Per OpenAI's terms, the user owns generated
   outputs. Disclose AI generation where a store asks (chapter 15).
+
+VOICE (assets/voice/)
+title.ogg, clogged.ogg, highscore.ogg — deadpan announcer lines
+  generated locally with Qwen3-TTS (12Hz 1.7B CustomVoice) on the
+  author's GPU via a qwen_tts script; style-instructed synthesis
+  ("deadpan, dry, unimpressed game announcer"). Check the model's
+  license before commercial use; disclose as AI voice where asked.
+  Not wired into the game — chapter 11 keeps the voice optional.
+
+BACKGROUND (assets/sprites/background-pipe*.png)
+  Pipe interior generated with gpt-image-2 via tools/generate_sprite.py
+  (--opaque), muted per chapter 12's readability law. Same terms as
+  the other image assets.

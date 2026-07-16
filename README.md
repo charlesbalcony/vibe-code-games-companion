@@ -46,7 +46,9 @@ the book's chapters are finalized.)
 | `ch07-3-juice-pass` | Ch. 7, end of session three | pop, punch, freeze, SHAKE, and wink at your near-misses |
 | `ch08-1-menus-and-memory` | Ch. 8, end of session four | boot to a menu, pause, remap keys, remember your best forever |
 | `ch09-1-v1-0-shipped` | Ch. 9, `v1.0: shipped to itch.io` | credit its maker (the export/itch steps are in its README) |
-| `ch10 → ch12` | Part III re-skin checkpoints | *(coming — they need the generated art and audio)* |
+| `ch10-1-the-great-reskin-part-1` | Ch. 10, end | wear real sprites (hitboxes untouched, style bible in CLAUDE.md) |
+| `ch11-1-the-game-has-ears` | Ch. 11, end | loop its theme, pop, whoosh, sting after the freeze, click |
+| `ch12-1-v2-the-glow-up` | Ch. 12, `v2.0` | the full montage: world, logo, CLOGGED art, icon, NEW BEST zing |
 
 Bonus: this repo's **git history** mirrors the book — each checkpoint
 was committed with the book's own commit message, so `git log` reads
@@ -56,11 +58,14 @@ like the story, and chapter 14's bisect exercise has a practice arena.
 
 - `assets/` — the actual generated game assets from Part III: sprites
   (AI, transparent PNG), music (local MusicGen, **non-commercial
-  license — read `assets/CREDITS.txt`**), and synthesized SFX. Can't
-  run the generators yet? Use these and keep reading.
+  license — read `assets/CREDITS.txt`**), synthesized SFX, and
+  optional announcer voice lines (local Qwen3-TTS). Can't run the
+  generators yet? Use these and keep reading.
 - `tools/` — `generate_sprite.py` (ch. 10: OpenAI API → transparent
   PNG sprites), `generate_music.py` (ch. 11: local MusicGen music),
-  and `generate_sfx.py` (ch. 11: zero-dependency retro SFX, no AI).
+  `generate_sfx.py` (ch. 11: zero-dependency retro SFX — and it's
+  clay: ask your agent to add new sounds to it), and
+  `generate_speech_elevenlabs.py` (ch. 11: frontier voices by API).
 - `templates/` — the starter `CLAUDE.md` house rules, `.env.example`,
   and launcher scripts, ready to copy into a new project.
 - `prompts/prompt-cookbook.md` — Appendix B: every load-bearing prompt
