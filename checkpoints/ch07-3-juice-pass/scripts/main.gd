@@ -120,6 +120,8 @@ func _burst(pos: Vector2, color: Color, amount: int) -> void:
 	particles.initial_velocity_max = 140.0
 	particles.gravity = Vector2(0, 220)
 	particles.color = color
+	particles.scale_amount_min = 3.0
+	particles.scale_amount_max = 6.0
 	add_child(particles)
 	get_tree().create_timer(1.0).timeout.connect(particles.queue_free)
 
@@ -127,7 +129,8 @@ func _burst(pos: Vector2, color: Color, amount: int) -> void:
 func _float_text(text: String, pos: Vector2) -> void:
 	var label := Label.new()
 	label.text = text
-	label.position = pos - Vector2(30, 40)
+	label.add_theme_font_size_override("font_size", 30)
+	label.position = pos - Vector2(40, 44)
 	add_child(label)
 	var tween := create_tween()
 	tween.tween_property(label, "position:y", label.position.y - 40.0, 0.6)
