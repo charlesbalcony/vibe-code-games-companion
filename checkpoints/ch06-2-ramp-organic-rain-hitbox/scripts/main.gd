@@ -7,6 +7,7 @@ const MIN_SPAWN_WAIT := 0.35
 const RAMP_PER_SECOND := 4.0   # fall speed gained per second survived
 
 var game_over := false
+var _restart_armed := false
 var _elapsed := 0.0
 
 @onready var spawn_timer: Timer = $SpawnTimer
@@ -21,7 +22,13 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if game_over:
-		if Input.is_anything_pressed():
+		# A held key must not skip the funeral: wait for the death
+		# screen, then require a FRESH press (release first).
+		if not game_over_label.visible:
+			return
+		if not _restart_armed:
+			_restart_armed = not Input.is_anything_pressed()
+		elif Input.is_anything_pressed():
 			get_tree().reload_current_scene()
 		return
 

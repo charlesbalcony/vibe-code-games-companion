@@ -4,6 +4,7 @@ extends Node2D
 const SPAWN_WAIT := 0.9
 
 var game_over := false
+var _restart_armed := false
 
 @onready var spawn_timer: Timer = $SpawnTimer
 @onready var game_over_label: Label = $HUD/GameOverLabel
@@ -16,8 +17,16 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if game_over and Input.is_anything_pressed():
-		get_tree().reload_current_scene()
+	if game_over:
+		# A held key must not skip the funeral: wait for the death
+		# screen, then require a FRESH press (release first).
+		if not game_over_label.visible:
+			return
+		if not _restart_armed:
+			_restart_armed = not Input.is_anything_pressed()
+		elif Input.is_anything_pressed():
+			get_tree().reload_current_scene()
+		return
 
 
 func _spawn_faller() -> void:

@@ -15,6 +15,7 @@ const SHAKE_SECONDS := 0.5
 const SHAKE_STRENGTH := 12.0
 
 var game_over := false
+var _restart_armed := false
 var _elapsed := 0.0
 var _score_accum := 0.0
 var _shake_time := 0.0
@@ -26,6 +27,7 @@ var _shake_time := 0.0
 
 
 func _ready() -> void:
+	Engine.time_scale = 1.0  # heal any leak from a mid-effect scene change
 	GameState.reset_run()
 	game_over_label.visible = false
 	camera.make_current()
@@ -42,7 +44,13 @@ func _process(delta: float) -> void:
 			camera.offset = Vector2.ZERO
 
 	if game_over:
-		if Input.is_anything_pressed():
+		# A held key must not skip the funeral: wait for the death
+		# screen, then require a FRESH press (release first).
+		if not game_over_label.visible:
+			return
+		if not _restart_armed:
+			_restart_armed = not Input.is_anything_pressed()
+		elif Input.is_anything_pressed():
 			get_tree().reload_current_scene()
 		return
 
@@ -88,6 +96,8 @@ func _on_near_miss(faller: Faller) -> void:
 
 
 func _end_run() -> void:
+	if game_over:
+		return  # the funeral is idempotent: posthumous plungers change nothing
 	game_over = true
 	spawn_timer.stop()
 	# Hit-stop: freeze the world for a beat (the timer ignores time scale),
