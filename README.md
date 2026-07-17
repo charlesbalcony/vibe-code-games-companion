@@ -1,6 +1,19 @@
 # Vibe Code Video Games While You Poop — Companion Repo
 
-The official companion to the book. Everything here exists so you can
+The official companion to **_Vibe Code Video Games While You Poop_** by
+Charles Balcony — a field guide to directing AI coding agents through
+building real, finished Godot games in twelve-minute sittings.
+
+**📖 The book lands on Amazon (Kindle) soon — the link will live right
+here. Watch this repo to catch launch week.**
+
+**🦆 Want to play the game the book builds?** Grab
+[`checkpoints/ch12-1-v2-the-glow-up`](checkpoints/ch12-1-v2-the-glow-up)
+and double-click `run.bat` (Windows) or `./run.sh` (Mac/Linux). That's
+the finished thing — sprites, music, a pipe with a history of poor
+maintenance.
+
+Everything here exists so you can
 **compare what your agent did to what ours did** at every save point in
 the build — and copy-paste the exact prompts if you want to.
 
@@ -75,4 +88,3 @@ like the story, and chapter 14's bisect exercise has a practice arena.
 
 Code and project files: MIT (see `LICENSE`). The book's text is not in
 this repo and is not covered by it.
-# vibe-code-games-companion
